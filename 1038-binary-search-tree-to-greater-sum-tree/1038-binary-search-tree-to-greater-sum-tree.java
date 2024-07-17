@@ -15,17 +15,17 @@
  */
 class Solution {
     public int sum=0;
-    public void ReversePreOrder(TreeNode root){
+    public void ReverseInOrder(TreeNode root){
          if(root==null){
             return;
          }
-         ReversePreOrder(root.right);
+         ReverseInOrder(root.right);
          sum+=root.val;
          root.val=sum;
-         ReversePreOrder(root.left);
+         ReverseInOrder(root.left);
     }
     public TreeNode bstToGst(TreeNode root) {
-        ReversePreOrder(root);
+        ReverseInOrder(root);
         return root;
     }
 }
